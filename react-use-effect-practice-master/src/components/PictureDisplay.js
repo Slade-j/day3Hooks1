@@ -24,7 +24,6 @@ const feathers = [
     featherA,
 ];
 
-
 function PictureDisplay ({ size, featherCount, featherColors }) {
 
   // useEffect(() => {
@@ -32,15 +31,15 @@ function PictureDisplay ({ size, featherCount, featherColors }) {
   //   }, [size, featherCount, featherColors]);
 
   useEffect(() => {
-    console.log('Picter display size', size)
+    console.log('Picture display size', size)
   }, [size])
 
   useEffect(() => {
-    console.log('Picter feather count', featherCount)
+    console.log('Picture feather count', featherCount)
   }, [featherCount])
 
   useEffect(() => {
-    console.log('Picter display feather color', featherColors)
+    console.log('Picture display feather color', featherColors)
   }, [featherColors])
 
   // TODO: Wrap in useEffectl
