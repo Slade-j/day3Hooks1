@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import turkey from "../images/turkey.png";
 import feather1 from "../images/feather1.svg";
 import feather2 from "../images/feather2.svg";
@@ -23,10 +24,26 @@ const feathers = [
     featherA,
 ];
 
-function PictureDisplay ({ size, featherCount, featherColors }) {
-  console.log('PictureDisplay', size, featherCount, featherColors);
 
-  // TODO: Wrap in useEffect
+function PictureDisplay ({ size, featherCount, featherColors }) {
+
+  // useEffect(() => {
+  //     console.log('PictureDisplay', size, featherCount, featherColors);
+  //   }, [size, featherCount, featherColors]);
+
+  useEffect(() => {
+    console.log('Picter display size', size)
+  }, [size])
+
+  useEffect(() => {
+    console.log('Picter feather count', featherCount)
+  }, [featherCount])
+
+  useEffect(() => {
+    console.log('Picter display feather color', featherColors)
+  }, [featherColors])
+
+  // TODO: Wrap in useEffectl
   const colors = [];
   if (!featherColors || featherColors.length === 0) featherColors = [''];
   for (let i=0; i<featherCount; i++) {
